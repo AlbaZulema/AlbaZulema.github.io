@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Zule</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Studio Zule">
+        <span>Studio Zule</span>
+      </div>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <ul class="menu">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#galeria">Galería</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+    <h1> Diseño web</h1>
+
+
+  <section class="carrusel-auto">
+    <div class="carrusel-container">
+      <button class="arrow left">&#8249;</button>
+      <div class="carrusel">
+        <img src="img/trab/DW1.jpg" alt="Imagen 1" class="carrusel-full">
+        <img src="img/trab/DW2.jpg" alt="Imagen 2" class="carrusel-full">
+        <img src="img/trab/DW3.jpg" alt="Imagen 3" class="carrusel-full">
+        <img src="img/trab/DW1.jpg" alt="Imagen 1 Duplicada" class="carrusel-full">
+      </div>
+      <button class="arrow right">&#8250;</button>
+    </div>
+  </section>
+
+  <section class="descripcion-servicio">
+    <h2>¿Qué incluye nuestro servicio?</h2>
+    <p>Proponemos crear sitios visualmente atractivos; pero también nos enfocamos en crear experiencias interactivas, funcionales y optimizadas que logren un impacto real. Ya sea para un sitio web corporativo, un portafolio personal o una tienda en línea, nuestros diseños están pensados para ofrecer una navegación intuitiva, rendimiento rápido y un diseño responsivo que se adapte a todos los dispositivos.</p><p></p>
+    <h2>¿Nuestros servicios incluyen:</h2>
+    <p>Desarrollo de sitios web personalizados (HTML, CSS, JavaScript).<br><br>
+
+    Diseño de landing pages y sitios informativos.<br><br>
+
+    Diseño y desarrollo de tiendas en línea (e-commerce).<br><br>
+
+    Optimización web para SEO y rendimiento.<br><br>
+
+    Implementación de interacciones y animaciones.<br><br>
+
+    <p> Integración de formularios de contacto, newsletters y otros elementos interactivos.</p>
+  </section>
+
+  <section class="paquetes-servicio">
+    <h2>Paquetes y costos</h2>
+    <div class="grid-paquetes">
+      <div class="paquete">
+        <h3>Básico</h3>
+        <p>Logo simple, tarjeta de presentación</p>
+        <strong>$1,000 MXN</strong>
+      </div>
+      <div class="paquete">
+        <h3>Estándar</h3>
+        <p>Logo, papelería, diseño de redes</p>
+        <strong>$1, 900 MXN</strong>
+      </div>
+      <div class="paquete">
+        <h3>Premium</h3>
+        <p>Identidad completa, manual, branding digital</p>
+        <strong>$3,300 MXN</strong>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Studio Zule. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+    toggle?.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+
+

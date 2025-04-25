@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Zule</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Studio Zule">
+        <span>Studio Zule</span>
+      </div>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <ul class="menu">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#galeria">Galería</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+    <h1> Diseño Gráfico</h1>
+
+
+  <section class="carrusel-auto">
+    <div class="carrusel-container">
+      <button class="arrow left">&#8249;</button>
+      <div class="carrusel">
+        <img src="img/trab/DG1.jpg" alt="Imagen 1" class="carrusel-full">
+        <img src="img/trab/DG2.jpg" alt="Imagen 2" class="carrusel-full">
+        <img src="img/trab/DG3.jpg" alt="Imagen 3" class="carrusel-full">
+        <img src="img/trab/DG1.jpg" alt="Imagen 1 Duplicada" class="carrusel-full">
+      </div>
+      <button class="arrow right">&#8250;</button>
+    </div>
+  </section>
+
+  <section class="descripcion-servicio">
+    <h2>¿Qué incluye nuestro servicio?</h2>
+    <p>Ofrecemos diseño gráfico profesional para crear una identidad visual atractiva, coherente y funcional para tu marca. Desde branding hasta material impreso y digital.</p>
+    <h2>¿Nuestros servicios incluyen:</h2>
+    <p>Diseño de posts, historias y reels para redes sociales
+      <br><br>
+      Banners publicitarios digitales<br><br>
+
+      Diseño de presentaciones digitales<br><br>
+
+      Plantillas visuales para marcas<br><br>
+
+      Contenido visual para campañas en línea<br><br>
+
+      Diseño de anuncios para Google y redes sociales</p>
+  </section>
+
+  <section class="paquetes-servicio">
+    <h2>Paquetes y costos</h2>
+    <div class="grid-paquetes">
+      <div class="paquete">
+        <h3>Básico</h3>
+        <p>Logo simple, tarjeta de presentación</p>
+        <strong>$800 MXN</strong>
+      </div>
+      <div class="paquete">
+        <h3>Estándar</h3>
+        <p>Logo, papelería, diseño de redes</p>
+        <strong>$1,500 MXN</strong>
+      </div>
+      <div class="paquete">
+        <h3>Premium</h3>
+        <p>Identidad completa, manual, branding digital</p>
+        <strong>$2,500 MXN</strong>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Studio Zule. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+    toggle?.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+
+

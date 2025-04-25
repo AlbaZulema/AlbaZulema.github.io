@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Zule</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    .filtros {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .filtros button {
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #1D2B53;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .filtros button.activo,
+    .filtros button:hover {
+      background-color: #FF004D;
+    }
+    .grid-proyectos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .proyecto {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .proyecto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .info-hover {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(29, 43, 83, 0.9);
+      color: white;
+      padding: 1rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .proyecto:hover .info-hover {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo de Studio Zule">
+        <span>Studio Zule</span>
+      </div>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <ul class="menu" id="menu">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#galeria">Galería</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <section class="galeria-proyectos">
+    <h2>Galería de Proyectos</h2>
+    <div class="filtros">
+      <button data-filtro="todo">Todo</button>
+      <button data-filtro="identidad">Identidad</button>
+      <button data-filtro="digital">Diseño Digital</button>
+      <button data-filtro="social">Social Media</button>
+      <button data-filtro="branding">Branding</button>
+      <button data-filtro="editorial">Editorial</button>
+      <button data-filtro="ilustracion">Ilustraciones</button>
+    </div>
+    <div class="grid-proyectos">
+      <div class="proyecto" data-categoria="identidad">
+        <img src="img/trab/Puerta Studio.jpg" alt="Identidad 1">
+        <div class="info-hover">
+          <h3>Unique&Creative </h3>
+          <p>Proyecto de identidad visual de estuio de produción.</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="branding">
+        <img src="img/trab/Embossed-Debossed-Business-Cards-Mockup.jpg" alt="Branding 1">
+        <div class="info-hover">
+          <h3>Unique&Creative</h3>
+          <p>Proyecto de identidad visual de estuio de produción.</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="branding">
+        <img src="img/trab/Views_01.jpg" alt="Branding 1">
+        <div class="info-hover">
+          <h3>Unique&Creative</h3>
+          <p>Proyecto de identidad visual de estuio de produción.</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-categoria="digital">
+        <img src="img/trab/ACT8.jpg" alt="Digital 1">
+        <div class="info-hover">
+          <h3>Natufe</h3>
+          <p>Diseño de cambio de producto a marca.</p>
+        </div>
+      </div>
+
+
+
+      <div class="proyecto" data-categoria="identidad">
+        <img src="img/trab/Fundamentos de comp dig_StrideSense.png" alt="Identidad 2">
+        <div class="info-hover">
+          <h3>StrideSense</h3>
+          <p>Diseño de logo institusional</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-categoria="identidad">
+        <img src="img/trab/Mesa de trabajo 9-80.jpg" alt="Identidad 1">
+        <div class="info-hover">
+          <h3>Yonut </h3>
+          <p>Proyecto de identidad visual marca de lacteos.</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-categoria="social">
+        <img src="img/trab/73.png" alt="Social 1">
+        <div class="info-hover">
+          <h3>Yonut</h3>
+          <p>Post Instagram para redes sociales.</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="social">
+        <img src="img/trab/post1.jpg" alt="Social 1">
+        <div class="info-hover">
+          <h3>StrideSide</h3>
+          <p>Post Instagram para redes sociales.</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-categoria="identidad">
+        <img src="img/trab/Recurso 12.png" alt="Identidad 3">
+        <div class="info-hover">
+          <h3>Studio Zule</h3>
+          <p>Diseño de logo institusional</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-categoria="branding">
+        <img src="img/trab/Tote-Bag-Mockup.jpg" alt="Branding 1">
+        <div class="info-hover">
+          <h3>Studio Zule</h3>
+          <p>RNuestro diseño de marca para nueva audiencia.</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-categoria="branding">
+        <img src="img/trab/Aplicaciones01.png" alt="Branding 1">
+        <div class="info-hover">
+          <h3>Studio Zule</h3>
+          <p>RNuestro diseño de marca para nueva audiencia.</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-categoria="branding">
+        <img src="img/trab/Aplicaciones02.png" alt="Branding 1">
+        <div class="info-hover">
+          <h3>Studio Zule</h3>
+          <p>RNuestro diseño de marca para nueva audiencia.</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-categoria="editorial">
+        <img src="img/trab/Mokuo_Libro.jpg" alt="Editorial 1">
+        <div class="info-hover">
+          <h3>El pión de la cocina</h3>
+          <p>Diseño de libro de cocina para niños</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-categoria="diseño">
+        <img src="img/trab/Acitividad 6-1.jpg" alt="digital 4">
+        <div class="info-hover">
+          <h3>Frozen Sport</h3>
+          <p>Diseño de portada de revista</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-categoria="social">
+        <img src="img/trab/Ajolote_IGStories.jpg" alt="Social 2">
+        <div class="info-hover">
+          <h3>Ajolote</h3>
+          <p>Post Instagram para redes sociales.</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-categoria="ilustracion">
+        <img src="img/trab/Captura de pantalla 2024-05-06 010613.png" alt="ilustracion 1">
+        <div class="info-hover">
+          <h3>Pilón de la cocina</h3>
+          <p>Apartado para libro</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-categoria="ilustracion">
+        <img src="img/trab/Captura de pantalla 2024-05-06 012335.png" alt="ilustracion 1">
+        <div class="info-hover">
+          <h3>Pilón de la cocina</h3>
+          <p>Apartado para libro</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-categoria="ilustracion">
+        <img src="img/trab/O6CBN71.jpg" alt="ilustracion 2">
+        <div class="info-hover">
+          <h3>Tiddles Art/h3>
+          <p>Portada para revista</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="editorial">
+        <img src="img/trab/P1 Contenido Revista Art.png" alt="Editorial 2">
+        <div class="info-hover">
+          <h3>Tiddles Art</h3>
+          <p>Diseño de revista de Arte</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="editorial">
+        <img src="img/trab/P2 Revista Art.png" alt="Editorial 2">
+        <div class="info-hover">
+          <h3>Tiddles Art</h3>
+          <p>Diseño de revista de Arte</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="editorial">
+        <img src="img/trab/P3 Revista Art.png" alt="Editorial 2">
+        <div class="info-hover">
+          <h3>Tiddles Art</h3>
+          <p>Diseño de revista de Arte</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="digital">
+        <img src="img/trab/act-13.jpg" alt="Digital 1">
+        <div class="info-hover">
+          <h3>Play&Learn</h3>
+          <p>Diseño de de flyer para marca de juguetes</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-categoria="digital">
+        <img src="img/trab/Actividad-14.jpg" alt="Digital 1">
+        <div class="info-hover">
+          <h3>Ambiental/h3>
+          <p>Diseño de de flyer para concienia ambiental</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="ilustracion">
+        <img src="img/trab/DI1.jpg" alt="ilustracion 1">
+        <div class="info-hover">
+          <h3>Colibrí</h3>
+          <p>Diseño de verctor de colibrí</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="ilustracion">
+        <img src="img/trab/DI3.jpg" alt="ilustracion 1">
+        <div class="info-hover">
+          <h3>Robot</h3>
+          <p>Diseño robot</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="digital">
+        <img src="img/trab/Diseño digital para la animación_Portada de revista.jpg" alt="Digital 1">
+        <div class="info-hover">
+          <h3>Caffeinn</h3>
+          <p>Diseño dde portada de revista</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="digital">
+        <img src="img/trab/Evidencia 3.png" alt="Digital 1">
+        <div class="info-hover">
+          <h3>Chips</h3>
+          <p>Diseño de flyer de producto creativo</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="digital">
+        <img src="img/trab/Layout01_evidenica1.png" alt="Digital 1">
+        <div class="info-hover">
+          <h3>Red Bull</h3>
+          <p>Diseño layout para el producto</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="digital">
+        <img src="img/trab/Layout02_evidenica1.png" alt="Digital 1">
+        <div class="info-hover">
+          <h3>Red Bull</h3>
+          <p>Diseño layout para el producto</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="digital">
+        <img src="img/trab/NeoTokyoVR.png" alt="Digital 1">
+        <div class="info-hover">
+          <h3>NeoTokyo VR</h3>
+          <p>Flyer de anuncio de eveno </p>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const botones = document.querySelectorAll(".filtros button");
+      const proyectos = document.querySelectorAll(".proyecto");
+
+      botones.forEach(boton => {
+        boton.addEventListener("click", () => {
+          const filtro = boton.dataset.filtro;
+          botones.forEach(btn => btn.classList.remove("activo"));
+          boton.classList.add("activo");
+
+          proyectos.forEach(proyecto => {
+            const categoria = proyecto.dataset.categoria;
+            proyecto.style.display = (filtro === "todo" || filtro === categoria) ? "block" : "none";
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
