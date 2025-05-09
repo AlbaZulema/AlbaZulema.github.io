@@ -6,23 +6,6 @@
   <title>Studio Zule</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
-  <style>
-    .hidden { display: none; }
-    .open { display: block; }
-    @media (max-width: 768px) {
-      .menu {
-        display: none;
-        flex-direction: column;
-        background-color: #fff;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      }
-      .menu.open { display: flex; }
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -32,39 +15,200 @@
         <span>Studio Zule</span>
       </div>
       <button class="menu-toggle" id="menuToggle">☰</button>
-      <ul class="menu hidden" id="menu">
+      <ul class="menu">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="galeria.html" >Galería</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Secciones de contenido... -->
+
+
+  <section id="inicio" class="hero">
+    <div class="hero-text">
+      <h1>Explora nuevas formas de crear tu idea</h1>
+      <p>Somos un estudio de diseño donde las ideas cobran vida. Creamos experiencias visuales únicas que conectan con las personas.</p>
+      <a href="#galeria-inicio" class="btn">Nuestros proyectos</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="img/hero-illustration.png" alt="Ilustración de Studio Zule">
+    </div>
+  </section>
+
+  <section id="trabajos" class="mejores-trabajos">
+    <h2>Mejores Trabajos</h2>
+    <div class="grid-trabajos">
+      <div class="trabajo">
+        <img src="img/trab/Layout01_evidenica1.png" alt="Trabajo destacado 1">
+        <div class="info">
+          <h2>#1</h>
+          <h4>Red Bull | 2023</h4>
+          <p>Diseño visual para marca de Red Bull</p>
+        </div>
+      </div>
+      <div class="trabajo">
+        <img src="img/trab/Mokup_SitioWeb.jpg" alt="Trabajo destacado 2">
+        <div class="info">
+          <h2>#2</h2>
+          <h4>Pets and doodles| 2024</h4>
+          <p>UX para sitio web de adocción de mascotas</p>
+        </div>
+      </div>
+      <div class="trabajo">
+        <img src="img/trab/Mokuo_Libro.jpg" alt="Trabajo destacado 3">
+        <div class="info">
+          <h2>#3</h2>
+          <h4>El pilón de la cocina | 2024</h4>
+          <p>Revista de cocina para niños</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="nosotros" class="seccion-nosotros">
+    <div class="fila-nosotros">
+      <div>
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos Studio Zule, un estudio de diseño creativo con un enfoque innovador y fresco. Nos especializamos en crear soluciones visuales que transforman ideas en experiencias impactantes. Nuestro objetivo es ayudar a marcas, emprendedores y artistas a destacarse en el mundo digital con diseños únicos que capturan la esencia de cada proyecto.</p>
+        <p>Creemos en el poder del diseño para conectar emocionalmente con las personas. Desde la conceptualización hasta la ejecución, trabajamos de la mano con nuestros clientes para crear experiencias visuales atractivas, funcionales y estratégicas.</p>
+      </div>
+      <div>
+        <img src="img/nosotros.png" alt="Equipo Studio Zule" style="max-width:100%; border-radius: 10px;">
+      </div>
+    </div>
+    <div class="fila-nosotros">
+      <div>
+        <h3>Misión</h3>
+        <p>Ofrecer soluciones de diseño personalizadas, creativas y de alta calidad que ayuden a nuestros clientes a comunicar su mensaje de manera efectiva y memorable.</p>
+      </div>
+      <div>
+        <h3>Visión</h3>
+        <p>Convertirnos en una agencia referente de diseño digital en México, reconocida por su innovación y creatividad al conectar marcas con su audiencia.</p>
+      </div>
+    </div>
+    <div class="fila-valores">
+      <div class="valor">
+        <div class="icono"><img src="icons/flexibilidad.svg" alt="Adaptabilidad" width="40"></div>
+        <h4>Adaptabilidad</h4>
+        <p>Nos ajustamos a cada proyecto y cliente con soluciones flexibles y eficaces.</p>
+      </div>
+      <div class="valor">
+        <div class="icono"><img src="icons/creatividad.svg" alt="Creatividad" width="40"></div>
+        <h4>Creatividad</h4>
+        <p>Innovamos constantemente para crear diseños únicos que inspiran.</p>
+      </div>
+      <div class="valor">
+        <div class="icono"><img src="icons/responsabilidad.svg" alt="Responsabilidad" width="40"></div>
+        <h4>Responsabilidad</h4>
+        <p>Cumplimos con compromiso y ética en cada entrega que realizamos.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="servicios" class="seccion-servicios">
+    <div class="contenido-servicios">
+      <h2>Servicios</h2>
+      <p>En Studio Zule, nos dedicamos a ofrecer soluciones de diseño visual creativas, personalizadas y de alta calidad. Ya sea que necesites darle vida a una nueva marca, mejorar tu presencia en línea o crear una experiencia digital única, estamos aquí para ayudarte en cada paso del proceso. Nuestro enfoque es siempre creativo, colaborativo y orientado a resultados.</p>
+      <div class="grid-servicios">
+    <a class="servicio" href="servicio-diseno.html">
+      <img src="img/trab/NeoTokyoVR.png" alt="Diseño gráfico">
+      <div>
+        <h3>Diseño Gráfico</h3>
+        <p>Creación de piezas visuales impactantes como posters, flyers y branding.</p>
+      </div>
+    </a>
+    <a class="servicio" href="servicio-ilustracion.html">
+      <img src="img/trab/Robot_Ilust.jpg" alt="Ilustración personalizada">
+      <div>
+        <h3>Ilustración</h3>
+        <p>Ilustraciones a medida para medios digitales e impresos.</p>
+      </div>
+    </a>
+    <a class="servicio" href="servicio-web.html">
+      <img src="img/trab/Pagina wen PYD Inicio.png" alt="Diseño Web">
+      <div>
+        <h3>Diseño Web</h3>
+        <p>Diseños modernos y responsivos para sitios atractivos y funcionales.</p>
+      </div>
+    </a>
+    <a class="servicio" href="servicio-editorial.html">
+      <img src="img/trab/Mokuo_Libro.jpg" alt="Ilustración personalizada">
+      <div>
+        <h3>Diseño editorial</h3>
+        <p>Libros y formatos de impresión desde folletos, volante, para su distibución pública</p>
+      </div>
+    </a>
+  </div>
+  </div>
+  </section>
 
   <section id="galeria-inicio" class="galeria-proyectos">
     <h2>Galería de Proyectos</h2>
     <div class="grid-proyectos">
       <div class="proyecto" data-categoria="identidad">
-        <img src="img/trab/Puerta Studio.jpg" loading="lazy" alt="Identidad 1">
+        <img src="img/trab/Puerta Studio.jpg" alt="Identidad 1">
         <div class="info-hover">
           <h3>Unique&Creative </h3>
-          <p>Proyecto de identidad visual de estuio de producción.</p>
+          <p>Proyecto de identidad visual de estuio de produción.</p>
         </div>
       </div>
-      <!-- ...Otros proyectos... -->
+      <div class="proyecto" data-categoria="digital">
+        <img src="img/trab/ACT8.jpg" alt="Digital 1">
+        <div class="info-hover">
+          <h3>Natufe</h3>
+          <p>Diseño de cambio de producto a marca.</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="social">
+        <img src="img/trab/73.png" alt="Social 1">
+        <div class="info-hover">
+          <h3>Yonut</h3>
+          <p>Post Instagram para redes sociales.</p>
+        </div>
+      </div>
+      <div class="proyecto" data-categoria="identidad">
+        <img src="img/trab/Fundamentos de comp dig_StrideSense.png" alt="Identidad 2">
+        <div class="info-hover">
+          <h3>StrideSense</h3>
+          <p>Diseño de logo institusional</p>
+        </div>
     </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="galeria.html" class="btn">Ver más proyectos</a>
+  </div>
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="galeria.html" class="btn">Ver más proyectos</a>
+  </div>
+  </section>
+
+
+  <section id= contacto class="contacto">
+    <h2>¿Quieres saber más?</h2>
+    <p>Contáctanos para recibir más información sobre nuestros servicios o para iniciar tu próximo proyecto con Studio Zule.</p>
+    <form class="formulario-contacto" action="enviar.php" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+    <div class="redes-sociales">
+      <p>Síguenos en nuestras redes:</p>
+      <a href="#" target="_blank"><img src="icons/instagram.svg" alt="Instagram"></a>
+      <a href="#" target="_blank"><img src="icons/facebook.svg" alt="Facebook"></a>
+      <a href="#" target="_blank"><img src="icons/behance.svg" alt="Behance"></a>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Studio Zule. Todos los derechos reservados.</p>
   </footer>
-
+</body>
+</html>
   <script>
     const toggle = document.getElementById('menuToggle');
     const menu = document.getElementById('menu');
